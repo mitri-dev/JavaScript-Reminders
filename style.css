@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: repeating-linear-gradient(0deg, hsla(103,11%,32%,0.09) 0px, hsla(103,11%,32%,0.09) 1px,transparent 1px, transparent 11px),repeating-linear-gradient(90deg, hsla(103,11%,32%,0.09) 0px, hsla(103,11%,32%,0.09) 1px,transparent 1px, transparent 11px),linear-gradient(90deg, hsl(317,13%,6%),hsl(317,13%,6%));
+}
+
+.main-card {
+  background-color: #eee;
+  box-shadow: 6px 6px 0 0 #00000030;
+  width: 800px;
+  height: 400px;
+  padding: 1em 8em;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.title {
+  text-align: center;
+  font-size: 200%;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+
+.main-card > * {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 200%;
+}
+
+.btn {
+  background-color: turquoise;
+  border-radius: 50%;
+  height: 1em;
+  width: 1em;
+  border: 4px solid #00000030;
+  cursor: pointer;
+}
+
+.options {
+  color: #eee;
+}
+
+.bg {
+  background-color: #00000090;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.txt {
+  position: absolute;
+  color: aqua;
+  z-index: 2;
+  background-color: #eee;
+  width: 200px;
+  height: 3em;
+  border-radius: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.txt::before {
+  height: 1em;
+  width: 1em;
+  background-color: #eee;
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+.txt .btn {
+  height: 2rem;
+  width: 2rem;
+  z-index: 2;
+}
+
+.btn.red {background-color: red;}
+.btn.green {background-color: green;}
+.btn.yellow {background-color: goldenrod;}
+
+/*
+// Colos Labels //
+*/
+.label {position: relative;}
+.label::before {
+  content: '';
+  height: 1em;
+  width: 0.7em;
+  background-color: #0033bb;
+  border: 3px solid #000;
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.label:nth-of-type(2)::before {background-color: green;}
+.label:nth-of-type(3)::before {background-color: red;}
+.label:nth-of-type(4)::before {background-color: goldenrod;}
+.label:nth-of-type(5)::before {background-color: palevioletred;}
